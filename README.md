@@ -37,11 +37,11 @@ Initially built with **SQLite** for local development, then migrated to **Postgr
 ---
 
 ## 🧠 Project Structure
-│
-├── app.py # Main Flask app
-├── requirements.txt
-├── Procfile # For deployment
-└── README.md
+- │
+- ├── app.py # Main Flask app
+- ├── requirements.txt
+- ├── Procfile # For deployment
+- └── README.md
 
 ---
 
@@ -59,11 +59,11 @@ cd flask-string-analyzer
 ### 4 Setup environment variables
 
 ### 5 Initialize the database
-from app import db
-db.create_all()
-exit()
+- from app import db
+- db.create_all()
+- exit()
 
-### 5 Run the application
+### 6 Run the application
 python app run
 - app should run on  "http://127.0.0.1:5000/strings"
 
