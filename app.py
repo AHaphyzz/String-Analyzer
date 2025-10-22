@@ -114,7 +114,7 @@ def create_string():
         length=len(text),
         word_count=len(text.split()),
         unique_characters=len(set(text)),
-        character_frequency_map=json.dumps(dict(Counter(text))),
+        character_frequency_map=json.dumps(dict(Counter(text.lower().replace(" ", "")))),
         is_palindrome=text.lower().replace(" ", "") == text.lower().replace(" ", "")[::-1],
         sha256_hash=hashlib.sha256(text.encode()).hexdigest(),
         created_at=datetime.now(timezone.utc).isoformat()
