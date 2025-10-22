@@ -98,10 +98,11 @@ def parse_natural_language(filter_str):
 def create_string():
     data = request.get_json(force=True)
 
-    if "text" not in data:
+    if not data:
         return jsonify({"error": "Missing 'value' field"}), 400
 
-    text = data.get("text", "").strip()
+    key, value = next(iter(data.items()))
+    text = value.strip()
 
     if not isinstance(text, str):
         return jsonify({"error": "Value must be a string"}), 420
